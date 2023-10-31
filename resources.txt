@@ -1,0 +1,52 @@
+Sensor microcontroller
+ESP32
+see: https://www.espressif.com/en/products/socs/esp32
+
+Will poll sensors for data and send them wirelessly to hub
+This SoC seems to be a good tool for what we want to do
+We can write Rust for this !!!! (Thank you Ethan)
+(Or C if we wanted to be boring)
+
+
+Sensors
+
+Let's start with:
+Barometer
+Thermometer
+Photosensor
+Soil Moisture sensor
+
+For future, soil PH sensor (?)[need research], humidity 
+
+To start we'll probably just want to get this all working on a bread board before soldering everything together, could consider 3D printing a case
+
+
+
+Hub
+Raspberry Pi
+
+Will collect data from sensors and post them to database
+See: https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/
+
+Maybe need to find a different solution for this; we don't *need* to have a whole OS running for this but it would make things a little easier for us initially
+
+Probably want to write everything in Python for this to make it easy to do the http requests + native support
+
+
+
+DB / Server
+
+No idea how this is gonna work yet, probably want to get the sensor SoC to send data back to the hub before we worry about this
+
+
+App
+
+Android would probably be easier to start out with than iOS
+We could do a website too but let's make that a stretch goal
+
+
+
+FIN
+
+
+
